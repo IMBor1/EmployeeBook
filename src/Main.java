@@ -14,7 +14,7 @@ public class Main {
         employee[7] = new Employee("kolya", 5, 78000);
         employee[8] = new Employee("pasha", 3, 64000);
         employee[9] = new Employee("vanya", 1, 570000);
-        minDepartment(employee, 5);
+        listWithoutDepartment(employee, 5);
     }
 
     public static void listAll(Employee[] arr) {
@@ -99,5 +99,48 @@ public class Main {
 
         }
         return max;
+    }
+
+    public static void salaryDepartment(Employee[] arr, int department) {
+        double sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].getDepartament() == department) {
+                sum += arr[i].getSalary();
+            }
+        }
+        System.out.println("Сумма затрат на выплату зарплат в департаменте " +
+                department + " равна " + sum);
+    }
+
+    public static void middleSalaryDepartment(Employee[] arr, int department) {
+        double sum = 0;
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].getDepartament() == department) {
+                count++;
+                sum += arr[i].getSalary();
+            }
+        }
+        System.out.println("Средняя зарплата в департаменте " +
+                department + " равна " + sum / count);
+    }
+
+    public static void salaryIndexingOfDepartment(Employee[] arr, int department, double index) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].getDepartament() == department) {
+                arr[i].setSalary(arr[i].getSalary() * index);
+
+            }
+        }
+    }
+
+    public static void listWithoutDepartment(Employee[] arr, int department) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].getDepartament() == department) {
+
+                System.out.println("Имя " + arr[i].getName() + " , зарплата " +
+                        arr[i].getSalary() + " , id = " + arr[i].getId());
+            }
+        }
     }
 }

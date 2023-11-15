@@ -13,6 +13,13 @@ public class Employee {
         count++;
     }
 
+    public Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+        this.id = count;
+        count++;
+    }
+
     public String getName() {
         return name;
     }
