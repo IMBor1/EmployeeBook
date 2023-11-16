@@ -3,7 +3,7 @@ public class Employee {
     private String name;
     private int departament;
     private double salary;
-    int id;
+    private int id;
 
     public Employee(String name, int departament, double salary) {
         this.name = name;
@@ -18,6 +18,10 @@ public class Employee {
         this.salary = salary;
         this.id = count;
         count++;
+    }
+
+    public Employee(String name) {
+        this.name = name;
     }
 
     public String getName() {
