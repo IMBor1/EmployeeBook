@@ -243,7 +243,7 @@ public class EmployeeBook {
         }
     }
 
-    public void nameEmployeesByDepartament() {
+    /*  public void nameEmployeesByDepartament() {
         Employee[] dep1 = new Employee[10];
         Employee[] dep2 = new Employee[10];
         Employee[] dep3 = new Employee[10];
@@ -297,5 +297,5 @@ public class EmployeeBook {
         System.out.println(Arrays.toString(dep3));
         System.out.println(Arrays.toString(dep4));
         System.out.println(Arrays.toString(dep5));
-    }
+    }*/
 }
